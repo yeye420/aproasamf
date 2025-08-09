@@ -2,50 +2,168 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>contacto | Café Aproansanf</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto | Café Aproansanf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <!-- Font Awesome para íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
-    .redes {
-      margin-top: 15px;
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
       display: flex;
-      gap: 15px;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo-container img {
+      height: 60px;
+      max-width: 100%;
+      height: auto;
+    }
+    nav.menu-superior ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    nav.menu-superior ul li a {
+      text-decoration: none;
+      color: #2f5132;
+      font-weight: 600;
+      padding: 5px 8px;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+    nav.menu-superior ul li a:hover,
+    nav.menu-superior ul li a:focus,
+    nav.menu-superior ul li a.active {
+      color: #b8860b;
+      font-weight: 700;
+      outline: none;
+    }
+
+    .inicio {
+      width: 100%;
+      overflow: hidden;
+    }
+    .imagen-home {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .seccion {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .seccion h2 {
+      color: #6b3e0f;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .seccion p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #444;
+    }
+
+    .redes {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .redes a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       color: white;
-      font-size: 22px;
+      font-size: 24px;
       text-decoration: none;
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    /* Colores oficiales */
     .redes a.facebook {
       background-color: #1877F2;
     }
-
     .redes a.whatsapp {
       background-color: #25D366;
     }
-
     .redes a.gmail {
       background-color: #EA4335;
     }
 
-    /* Efecto hover */
-    .redes a:hover {
+    .redes a:hover,
+    .redes a:focus {
       transform: scale(1.1);
-      opacity: 0.8;
+      opacity: 0.85;
+      outline: none;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 0;
+      background-color: #2f5132;
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav.menu-superior ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      .seccion {
+        margin: 1rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .redes a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -60,7 +178,7 @@
         <li><a href="historia.html">Nuestra Historia</a></li>
         <li><a href="proceso.html">Proceso</a></li>
         <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html">Contáctanos</a></li>
+        <li><a href="contacto.html" class="active">Contáctanos</a></li>
       </ul>
     </nav>
   </header>
@@ -70,29 +188,27 @@
   </section>
 
   <section class="seccion">
-    <div class="contenedor">
-      <h2>Contáctanos</h2>
-      <p><strong>Correo:</strong> aproasanf05@gmail.com</p>
-      <p><strong>Teléfono:</strong> +57 3188357634</p>
-      <p><strong>Dirección:</strong> San Fernando, Libano Tolima, Colombia</p>
+    <h2>Contáctanos</h2>
+    <p><strong>Correo:</strong> <a href="mailto:aproasanf05@gmail.com">aproasanf05@gmail.com</a></p>
+    <p><strong>Teléfono:</strong> <a href="tel:+573188357634">+57 318 835 7634</a></p>
+    <p><strong>Dirección:</strong> San Fernando, Líbano Tolima, Colombia</p>
 
-      <!-- Redes sociales con íconos -->
-      <div class="redes">
-        <a href="https://www.facebook.com/share/1Epq1YwYCm/?mibextid=wwXIfr" target="_blank" class="facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://wa.me/573188357634" target="_blank" class="whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aproasanf05@gmail.com" target="_blank" class="gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
+    <!-- Redes sociales con íconos -->
+    <div class="redes">
+      <a href="https://www.facebook.com/share/1Epq1YwYCm/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/573188357634" target="_blank" aria-label="WhatsApp" class="whatsapp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:aproasanf05@gmail.com" aria-label="Enviar correo" class="gmail">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
     </div>
   </section>
 
   <footer>
-    <!-- Aquí iría tu pie de página -->
+    © 2025 Café Aproansanf - Todos los derechos reservados.
   </footer>
 </body>
 </html>
