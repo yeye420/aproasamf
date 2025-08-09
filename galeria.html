@@ -2,19 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proceso | Café Aproansanf</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f8f8;
+      color: #333;
     }
 
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
@@ -24,53 +25,64 @@
 
     .logo-container img {
       height: 60px;
+      max-width: 100%;
+      height: auto;
     }
 
-    .menu-superior ul {
+    nav.menu-superior ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
-    .menu-superior ul li a {
+    nav.menu-superior ul li a {
       text-decoration: none;
       color: #2f5132;
       font-weight: 600;
       transition: color 0.3s;
+      padding: 5px 8px;
+      display: inline-block;
     }
 
-    .menu-superior ul li a:hover {
+    nav.menu-superior ul li a:hover,
+    nav.menu-superior ul li a.activo {
       color: #b8860b;
+      font-weight: 700;
     }
 
-    /* Video de inicio sin recortes */
+    /* Video principal */
     .inicio {
-      position: relative;
       width: 100%;
-      background-color: #000; /* Fondo para las barras negras si aparecen */
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
     .video-home {
       width: 100%;
+      max-width: 900px;
       height: auto;
-      object-fit: contain; /* Mantener proporción sin recortar */
-      max-height: 500px; /* Limita la altura */
       background-color: #000;
+      object-fit: contain;
     }
 
-    /* Galería de imágenes */
+    /* Galería */
     .galeria-proceso {
-      padding: 40px;
+      padding: 40px 20px;
       background-color: #fff;
-      background-image: url('fondo-cafe.png'); /* opcional */
+      background-image: url('fondo-cafe.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      max-width: 1100px;
+      margin: 0 auto 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .grid-imagenes {
@@ -81,16 +93,45 @@
 
     .grid-imagenes img {
       width: 100%;
-      height: auto;
+      height: 180px;
+      object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
-    .grid-imagenes img:hover {
+    .grid-imagenes img:hover,
+    .grid-imagenes img:focus {
       transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      outline: none;
     }
 
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav.menu-superior ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      nav.menu-superior ul li a {
+        padding: 10px;
+      }
+      .video-home {
+        max-width: 100%;
+        max-height: 300px;
+      }
+      .galeria-proceso {
+        padding: 20px 10px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -109,29 +150,26 @@
     </nav>
   </header>
 
-  <!-- Video principal con controles y sin recortes -->
   <section class="inicio">
     <video class="video-home" controls playsinline>
-      <source src="video-proceso.mp4" type="video/mp4">
+      <source src="video-proceso.mp4" type="video/mp4" />
       Tu navegador no soporta el video.
     </video>
   </section>
 
-  <!-- Galería de imágenes -->
   <section class="galeria-proceso">
     <div class="grid-imagenes">
-      <img src="img1.jpg" alt="Reunión de productores">
-      <img src="img2.jpg" alt="Plántulas de café">
-      <img src="img3.jpg" alt="Capacitación">
-      <img src="img4.jpg" alt="Presentación de proyecto">
-      <img src="img5.jpg" alt="Grupo de trabajo">
-      <img src="img6.jpg" alt="Proceso productivo">
-      <img src="img7.jpg" alt="Entrega de materiales">
-      <img src="img8.jpg" alt="Foto grupal final">
-      <img src="img9.jpg" alt="Foto">
-      <img src="img10.jpg" alt="Foto Carlos">
+      <img src="img1.jpg" alt="Reunión de productores" />
+      <img src="img2.jpg" alt="Plántulas de café" />
+      <img src="img3.jpg" alt="Capacitación" />
+      <img src="img4.jpg" alt="Presentación de proyecto" />
+      <img src="img5.jpg" alt="Grupo de trabajo" />
+      <img src="img6.jpg" alt="Proceso productivo" />
+      <img src="img7.jpg" alt="Entrega de materiales" />
+      <img src="img8.jpg" alt="Foto grupal final" />
+      <img src="img9.jpg" alt="Foto" />
+      <img src="img10.jpg" alt="Foto Carlos" />
     </div>
   </section>
-
 </body>
 </html>
