@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contacto | Café Aproansanf</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    .redes {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .redes a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    /* Colores oficiales */
+    .redes a.facebook {
+      background-color: #1877F2;
+    }
+
+    .redes a.whatsapp {
+      background-color: #25D366;
+    }
+
+    .redes a.gmail {
+      background-color: #EA4335;
+    }
+
+    /* Efecto hover */
+    .redes a:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Aproansanf" />
+    </div>
+    <nav class="menu-superior">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Nuestra Historia</a></li>
+        <li><a href="proceso.html">Proceso</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="inicio">
+    <img src="contacto.jpg" alt="Banner Aproansanf completo" class="imagen-home" />
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <h2>Contáctanos</h2>
+      <p><strong>Correo:</strong> aproasanf05@gmail.com</p>
+      <p><strong>Teléfono:</strong> +57 3188357634</p>
+      <p><strong>Dirección:</strong> San Fernando, Libano Tolima, Colombia</p>
+
+      <!-- Redes sociales con íconos -->
+      <div class="redes">
+        <a href="https://www.facebook.com/share/1Epq1YwYCm/?mibextid=wwXIfr" target="_blank" class="facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/573188357634" target="_blank" class="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aproasanf05@gmail.com" target="_blank" class="gmail">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <!-- Aquí iría tu pie de página -->
+  </footer>
+</body>
+</html>

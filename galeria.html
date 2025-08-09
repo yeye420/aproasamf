@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proceso | Café Aproansanf</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo-container img {
+      height: 60px;
+    }
+
+    .menu-superior ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu-superior ul li a {
+      text-decoration: none;
+      color: #2f5132;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .menu-superior ul li a:hover {
+      color: #b8860b;
+    }
+
+    /* Video de inicio sin recortes */
+    .inicio {
+      position: relative;
+      width: 100%;
+      background-color: #000; /* Fondo para las barras negras si aparecen */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video-home {
+      width: 100%;
+      height: auto;
+      object-fit: contain; /* Mantener proporción sin recortar */
+      max-height: 500px; /* Limita la altura */
+      background-color: #000;
+    }
+
+    /* Galería de imágenes */
+    .galeria-proceso {
+      padding: 40px;
+      background-color: #fff;
+      background-image: url('fondo-cafe.png'); /* opcional */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .grid-imagenes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-imagenes img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .grid-imagenes img:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Aproansanf" />
+    </div>
+    <nav class="menu-superior">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Nuestra Historia</a></li>
+        <li><a href="proceso.html" class="activo">Proceso</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Video principal con controles y sin recortes -->
+  <section class="inicio">
+    <video class="video-home" controls playsinline>
+      <source src="video-proceso.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <section class="galeria-proceso">
+    <div class="grid-imagenes">
+      <img src="img1.jpg" alt="Reunión de productores">
+      <img src="img2.jpg" alt="Plántulas de café">
+      <img src="img3.jpg" alt="Capacitación">
+      <img src="img4.jpg" alt="Presentación de proyecto">
+      <img src="img5.jpg" alt="Grupo de trabajo">
+      <img src="img6.jpg" alt="Proceso productivo">
+      <img src="img7.jpg" alt="Entrega de materiales">
+      <img src="img8.jpg" alt="Foto grupal final">
+      <img src="img9.jpg" alt="Foto">
+      <img src="img10.jpg" alt="Foto Carlos">
+    </div>
+  </section>
+
+</body>
+</html>
