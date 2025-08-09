@@ -2,10 +2,136 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nuestra Historia | Café Aproansanf</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      padding-bottom: 2rem;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo-container img {
+      max-height: 60px;
+      width: auto;
+    }
+    nav.menu-superior {
+      flex-grow: 1;
+      margin-left: 2rem;
+    }
+    ul.menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    ul.menu li a {
+      font-weight: 700;
+      color: #2d2d2d;
+      padding: 0.5rem 0.75rem;
+      transition: color 0.3s ease;
+    }
+    ul.menu li a:hover,
+    ul.menu li a:focus {
+      color: #6b3e0f;
+    }
+
+    .inicio {
+      width: 100%;
+      overflow: hidden;
+    }
+    .imagen-home {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .seccion {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2, h3 {
+      color: #6b3e0f;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin-top: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+      font-size: 1.05rem;
+      color: #444;
+    }
+    p strong {
+      color: #6b3e0f;
+    }
+
+    .galeria-historia {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+    .galeria-historia img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      object-fit: cover;
+      height: 180px;
+      transition: transform 0.3s ease;
+    }
+    .galeria-historia img:hover,
+    .galeria-historia img:focus {
+      transform: scale(1.05);
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav.menu-superior {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      ul.menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+      }
+      ul.menu li a {
+        display: block;
+        padding: 0.5rem 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,7 +156,8 @@
   <section class="seccion">
     <div class="contenedor">
       <h2>Nuestra Historia</h2>
-      <p>Desde la tierra fértil del corregimiento de San Fernando, en las montañas del Líbano, Tolima, te traemos un café que cuenta historias de tradición, esfuerzo y sabor auténtico. 
+      <p>
+        Desde la tierra fértil del corregimiento de San Fernando, en las montañas del Líbano, Tolima, te traemos un café que cuenta historias de tradición, esfuerzo y sabor auténtico. 
         Nuestra marca, Café Sin Fronteras, es el fruto del trabajo colectivo de la Asociación de Productores Agropecuarios de San Fernando (APROASANF), constituida legalmente el 30 de diciembre de 2005 por un grupo de 20 familias agricultoras de las veredas Mesopotamia, Alto Cielo y San Fernando. Desde entonces, nos propusimos un objetivo claro: comercializar nuestro café especial a precios justos, abriendo caminos en mercados nacionales e internacionales.
       </p>
       <p>
@@ -40,13 +167,13 @@
         A lo largo de los años, hemos fortalecido una cadena productiva responsable, cuidando la trazabilidad, la inocuidad y el origen de nuestro café. Más que un producto, representamos un territorio, una comunidad resiliente y un legado de calidad que trasciende fronteras.
       </p>
 
-      <h3 style="text-align: left;">¿Quiénes somos?</h3>
+      <h3>¿Quiénes somos?</h3>
       <p>
         Somos caficultores y caficultoras del Líbano, Tolima, unidos por el deseo de transformar nuestra realidad rural a través del trabajo asociativo, la sostenibilidad y el amor por el café. En APROASANF creemos en una producción limpia, en el comercio justo y en el poder de nuestras raíces para construir un futuro digno desde el campo colombiano.
       </p>
 
       <p><strong>Visión:</strong> Llevar al mundo un café especial con origen en San Fernando, cultivado de forma limpia y sostenible por familias campesinas, preservando la calidad, la identidad territorial y el compromiso social en cada grano.</p>
-       <p><strong>Misión:</strong> Promover y posicionar un café especial con origen en San Fernando, cultivado de forma limpia y sostenible por familias campesinas, garantizando calidad, identidad territorial y compromiso social en cada grano.</p>
+      <p><strong>Misión:</strong> Promover y posicionar un café especial con origen en San Fernando, cultivado de forma limpia y sostenible por familias campesinas, garantizando calidad, identidad territorial y compromiso social en cada grano.</p>
 
       <div class="galeria-historia">
         <img src="Imagen1.jpg" alt="Imagen1" />
@@ -55,7 +182,5 @@
       </div>
     </div>
   </section>
-
-
 </body>
 </html>
